@@ -48,7 +48,7 @@ router.delete("/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     const record = await FinancialRecordModel.findByIdAndDelete(id);
-    if(!record) res.status(404).send("Couldn't find anything")
+    if (!record) res.status(404).send("Couldn't find anything");
     res.status(200).send(record);
   } catch (error) {
     res.status(500).send(error);
