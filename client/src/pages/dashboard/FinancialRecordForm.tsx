@@ -12,7 +12,7 @@ const FinancialRecordFrom = () => {
   const { user } = useUser(); 
 
   const handlesubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    event?.preventDefault();
+    e?.preventDefault();
 
     const newRecord = {
       userId: user?.id ?? "",
